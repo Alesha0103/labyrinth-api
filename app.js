@@ -247,9 +247,169 @@ const defaultDataBase = {
             { id: 16, neighbor: [12, 15], firstStep: true  }
           ]
         },
+
+        {
+          id: 2,
+          rightWay: [20, 24, 23, 27, 26, 22, 18, 17],
+          geometry: {
+            columns: 4,
+            rows: 3,
+          },
+          cells: [
+            { id: 17, neighbor: [18, 21]},
+            { id: 18, neighbor: [17, 19, 22] },
+            { id: 19, neighbor: [18, 20, 23] },
+            { id: 20, neighbor: [19, 24], firstStep: true },
+            { id: 21, neighbor: [17, 22, 25] },
+            { id: 22, neighbor: [18, 21, 23, 26] },
+            { id: 23, neighbor: [19, 22, 24, 27] },
+            { id: 24, neighbor: [20, 23, 28] },
+            { id: 25, neighbor: [21, 26] },
+            { id: 26, neighbor: [22, 25, 27] },
+            { id: 27, neighbor: [23, 26, 28] },
+            { id: 28, neighbor: [24, 27] }
+          ]
+        },
+
+        {
+          id: 3,
+          rightWay: [37, 38, 39, 35, 31, 32, 36, 40],
+          geometry: {
+            columns: 4,
+            rows: 3,
+          },
+          cells: [
+            { id: 29, neighbor: [30, 33]},
+            { id: 30, neighbor: [29, 31, 34] },
+            { id: 31, neighbor: [30, 32, 35] },
+            { id: 32, neighbor: [31, 36] },
+            { id: 33, neighbor: [29, 34, 37] },
+            { id: 34, neighbor: [30, 33, 35, 38] },
+            { id: 35, neighbor: [31, 34, 36, 39] },
+            { id: 36, neighbor: [32, 35, 40] },
+            { id: 37, neighbor: [33, 38], firstStep: true },
+            { id: 38, neighbor: [34, 37, 39] },
+            { id: 39, neighbor: [35, 38, 40] },
+            { id: 40, neighbor: [36, 39] }
+          ]
+        },
+
+        {
+          id: 4,
+          rightWay: [41, 44, 45, 48, 51, 52],
+          geometry: {
+            columns: 3,
+            rows: 4,
+          },
+          cells: [
+            { id: 41, neighbor: [42, 44], firstStep: true },
+            { id: 42, neighbor: [41, 43, 45] },
+            { id: 43, neighbor: [42, 46] },
+            { id: 44, neighbor: [41, 45, 47] },
+            { id: 45, neighbor: [42, 44, 46, 48] },
+            { id: 46, neighbor: [43, 45, 49] },
+            { id: 47, neighbor: [44, 48, 50] },
+            { id: 48, neighbor: [45, 47, 49, 51] },
+            { id: 49, neighbor: [46, 48, 52] },
+            { id: 50, neighbor: [47, 51] },
+            { id: 51, neighbor: [48, 50, 52] },
+            { id: 52, neighbor: [49, 51] },
+          ]
+        },
+
+        {
+          id: 5,
+          rightWay: [56, 57, 58, 61, 64, 63, 62],
+          geometry: {
+            columns: 3,
+            rows: 4,
+          },
+          cells: [
+            { id: 53, neighbor: [54, 56] },
+            { id: 54, neighbor: [53, 55, 57] },
+            { id: 55, neighbor: [54, 58] },
+            { id: 56, neighbor: [53, 57, 59], firstStep: true },
+            { id: 57, neighbor: [54, 56, 58, 60] },
+            { id: 58, neighbor: [55, 57, 61] },
+            { id: 59, neighbor: [56, 60, 62] },
+            { id: 60, neighbor: [57, 59, 61, 63] },
+            { id: 61, neighbor: [58, 60, 64] },
+            { id: 62, neighbor: [59, 63] },
+            { id: 63, neighbor: [60, 62, 64] },
+            { id: 64, neighbor: [61, 63] },
+          ]
+        },
       ]
     },
+    
   ]
+}
+
+const translations = {
+  usa: {
+    LABYRINTH: "Labyrinth",
+    GREETINGS: "Greetings, dear traveler!",
+    ENTER: "Looks like you are lost in the Labyrinth!",
+    RULES: "Here you can see the rules of this game:",
+    RULES_RULES:
+      "When you start the game you will see the number of cells. Your task is to match these cells to build the correct path. You can only click on a cell that is adjacent to the one you are already standing on, but not on the previous one you selected. If you make a wrong move, the Labyrinth will take you to another stage of that level. However, this stage is not counted. All levels have 5 stages. Your task is to pass all of them to proceed to the next level. Looks easy. Let's see. Good luck!",
+    START_GAME: "Start game",
+    CONGRATULATIONS:"Congratulations!",
+    COMPLETED_LEVEL: "You have completed the level",
+    NEXT_LEVEL: "Move to the next level",
+    FINISH_GAME_LABEL: "You have escaped the Labyrinth",
+    LEVEL: "Level №",
+    LIGHT_THEME: "Light",
+    DARK_THEME: "Dark",
+    FINISH_STAGE: "You've made this stage!",
+    WASTED_STAGE: "Wasted! Loading new stage...",
+    WARNING: "Cell is already selected",
+    WARNING_ERROR: "Follow the rules!",
+    WARNING_LAST_STAGE: "You are close! Don't give up!",
+    SHOW_HINT: "Show hint",
+    WAS_NOT_UPDATED: "Level was not updated",
+    ERROR: "Ooh, an ERROR...",
+    DEFAULT_ERROR: "It looks like this troll has hacked the Labyrinth.",
+    TRAINING_LEVEL: "Training level",
+    RULE_1: "You are standing at the green cell right now",
+    RULE_2: "You can move to any of these yellow cells, but only one is right",
+    RULE_3: "Click on yellow cell to choose it",
+    RULE_4: "If you try to go back or choose the cell which is not adjacent then the game will show you an error popup",
+    RULE_5: "You can use the hint wich will show you the right way",
+    RULE_6: "Try to find the last cell to finis this level",
+  },
+  ua: {
+    LABYRINTH: "Лабіринт",
+    GREETINGS: "Вітаємо, дорогий мандрівник!",
+    ENTER: "Схоже ти заблукав y Лабіринті!",
+    RULES: "Дивись правила цієї гри:",
+    RULES_RULES:
+      "Коли ти почнеш гру, то побачиш перед собою деяку кількість клітинок. Твоє завдання - зіставити ці клітинки так, щоб побудувати правильний шлях. Ти можеш натиснути лише на клітинку, яка поруч із тією, на якій ти вже стоїш, але не на попередню, яку ти вибирав до цього. Якщо ти зробиш неправильний рух, то цей етап не врахується і Лабіринт переведе тебе на інший, щоб заплутати. Всі рівні мають 5 етапів. Твоє завдання пройти їх усі. Виглядає досить легко. Давай подивимось. Удачі!",
+    START_GAME: "Почати гру",
+    CONGRATULATIONS:"Вітаємо!",
+    COMPLETED_LEVEL: "Ти пройшов рівень",
+    NEXT_LEVEL: "Перейти до наступного рівня",
+    FINISH_GAME_LABEL: "Ти вийшов з Лабіринту",
+    LEVEL: "Рівень №",
+    LIGHT_THEME: "Cвітла",
+    DARK_THEME: "Tемна",
+    FINISH_STAGE: "Ти пройшов цей етап!",
+    WASTED_STAGE: "Не правильно! Завантаження нового етапу...",
+    WARNING: "Клітинка вже вибрана",
+    WARNING_ERROR: "Слідуй правилам!",
+    WARNING_LAST_STAGE: "Ти близько! Не здавайся!",
+    SHOW_HINT: "Підказка",
+    WAS_NOT_UPDATED: "Рівень не оновлено!",
+    ERROR: "Сталася помилка!",
+    DEFAULT_ERROR: "Схоже троль щось зламав в Лабіринті.",
+    TRAINING_LEVEL: "Навчальний рівень",
+    RULE_1: "Зараз ти стоїш на зеленій клітинці",
+    RULE_2: "Ти можеш зробити хід на будь-яку жовту клітинку, але тільки одна з них вірна",
+    RULE_3: "Нажми на жовту клітинку щоб вибрати її",
+    RULE_4: "Якщо ти спробуєш зробити хід назад або на клітинку яка не є сусідньою то гра покаже тобі помилку",
+    RULE_5: "Ти можеш використати підсказку яка покаже тобі правильний шлях",
+    RULE_6: "Спробуй знайти останню клітинку щоб закінчити навчання",
+  }
 }
 
 let dataBase = JSON.parse(JSON.stringify(defaultDataBase));
@@ -269,6 +429,12 @@ app.get("/levels/:levelID", async (req, res) => {
     res.send([]);
   }
 });
+
+app.get("/translations/:lang", (req, res) => {
+  const lang = req.params.lang;
+  const chosenTranslation = translations[lang];
+  res.send(chosenTranslation);
+})
 
 app.get("/check-the-end", (req, res) => {
   const activeLevel = dataBase.levels.find(level => level.isLevelActive);
